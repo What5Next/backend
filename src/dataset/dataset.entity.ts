@@ -1,7 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn, Unique } from 'typeorm';
 import { BaseEntity } from 'typeorm/repository/BaseEntity';
 
 @Entity()
+@Unique(['cid'])
 export class Dataset extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
